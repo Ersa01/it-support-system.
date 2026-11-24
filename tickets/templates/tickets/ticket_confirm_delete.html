@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card border-0 shadow-sm"><div class="card-body p-4">
+  <h3>Өтінімді жою</h3><p>«{{ ticket.title }}» өтінімін жойғыңыз келе ме?</p>
+  <form method="post">{% csrf_token %}<button class="btn btn-danger" type="submit">Иә, жою</button> <a class="btn btn-light" href="{% url 'ticket_list' %}">Болдырмау</a></form>
+</div></div>
+{% endblock %}
